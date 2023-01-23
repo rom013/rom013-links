@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "blur": "url(./src/img/mobile.png)",
-        "blur-md": "url(./src/img/desktop.png)"
+        "blur": "url(./img/mobile.png)",
+        "blur-md": "url(./img/desktop.png)"
       }
     },
   },
