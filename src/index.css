@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply  bg-[#151515] bg-blur md:bg-blur-md bg-no-repeat bg-cover min-h-screen
+}
+.box-link-style{
+    @apply 
+        w-full 
+        max-w-[20rem] 
+        border-2 
+        bg-purple-900/10 
+        hover:bg-purple-900/30
+        transition 
+        border-gradient 
+        rounded-lg  
+        text-center 
+        uppercase
+        md:hover:scale-x-105
+        md:max-w-[500px] 
+}
+.input-form{
+  @apply 
+    w-full 
+    flex-1 
+    inline-flex 
+    items-center 
+    justify-center 
+    rounded 
+    py-1 px-3 
+    leading-relaxed 
+    h-9 
+    text-sm 
+    text-white
+    outline-none
+    focus:bg-[#1e1521]
+    bg-neutral-900
+    border 
+    border-violet-900
+    focus:border-violet-500
+}
+.text-gradient{
+    background: linear-gradient(90deg, #FF74D8 0.01%, #B600F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.border-gradient{
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #FF74D8 0%, #B600F7 100%) 1;
+}
+
+::-webkit-scrollbar{
+    width: 8px
+}
+::-webkit-scrollbar-thumb{
+    background: #242424;
+    border-radius: 8px
+}
+
+
+
+.DialogOverlay {
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .DialogContent {
+    box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    transform: translate(-50%, -50%);
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  
+  .Button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 500;
+    height: 35px;
+  }
+  
+
+
+  
+  @keyframes overlayShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
